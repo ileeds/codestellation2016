@@ -1552,3 +1552,15 @@
 2016-10-16 10:34:30,717 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/main/resources
 2016-10-16 10:34:30,720 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-10-16 10:34:30,721 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/test/resources
+2016-10-16 10:54:28,469 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-16 10:54:28,564 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/main/resources
+2016-10-16 10:54:28,567 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-16 10:54:28,666 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/test/resources
+2016-10-16 10:54:31,209 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-16 10:54:31,213 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/main/resources
+2016-10-16 10:54:31,216 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-16 10:54:31,217 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/test/resources
+2016-10-16 10:54:38,030 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-16 10:54:38,151 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/main/resources
+2016-10-16 10:54:38,154 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-16 10:54:38,154 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ianleeds/Desktop/codestellation/sparkdemo/src/test/resources
