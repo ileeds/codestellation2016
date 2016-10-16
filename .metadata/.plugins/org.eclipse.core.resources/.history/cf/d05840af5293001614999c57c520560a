@@ -1,0 +1,49 @@
+package edu.brandeis.cosi12b.sparkdemo;
+import static spark.Spark.*;
+import java.sql.*;
+import java.util.Properties;
+
+// https://sparktutorials.github.io/2015/08/24/spark-heroku.html
+// https://sparktutorials.github.io/2015/06/01/spark-freemarker.html
+// https://commons.apache.org/proper/commons-csv/
+
+public class Main {
+
+  public static void main(String[] args) {
+    port(getHerokuAssignedPort());
+    /*StudentDirectory sd = new StudentDirectory();
+    sd.readStudentInfoFile();
+    StudentChooserServer sc = new StudentChooserServer(sd);*/
+    VerticaConnect a = new VerticaConnect();
+    Connection main = a.start();
+    Statement mySelect;
+	try {
+		main.createStatement().executeUpdate("set search_path to " + "team3_schema");
+		mySelect = main.createStatement();
+		mySelect.executeUpdate("DROP TABLE manhuntUsers CASCADE;");
+		mySelect.executeUpdate("CREATE TABLE manhuntUsers(id int primary key, username varchar(100), password varchar(100), game varchar(100), status int, wins int, losses int);");
+		mySelect.executeUpdate("DROP TABLE manhuntGames CASCADE;");
+		mySelect.executeUpdate("CREATE TABLE manhuntGames(id int primary key, name varchar);");
+		mySelect.executeUpdate("DROP TABLE manhuntSeekers;");
+		mySelect.executeUpdate("CREATE TABLE manhuntSeekers(id INTEGER NOT NULL primary key, game_id int REFERENCES manhuntGames (id), user_id int REFERENCES manhuntUsers (id));");
+		mySelect.executeUpdate("DROP TABLE manhuntHiders;");
+		mySelect.executeUpdate("CREATE TABLE manhuntHiders(id INTEGER NOT NULL primary key, game_id int REFERENCES manhuntGames (id), user_id int REFERENCES manhuntUsers (id));");
+		Home h = new Home();
+		h.launch();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+    //sc.launch();
+    a.close();
+  }
+
+  static int getHerokuAssignedPort() {
+    ProcessBuilder processBuilder = new ProcessBuilder();
+    if (processBuilder.environment().get("PORT") != null) {
+      return Integer.parseInt(processBuilder.environment().get("PORT"));
+    }
+    return 4567; // return default port if heroku-port isn't set (i.e. on
+                 // localhost)
+  }
+
+}
